@@ -19,3 +19,15 @@ So, the publisher will send approximately **120 bytes** of serialized message da
 
 This means both the publisher and subscriber are connecting to the same AMQP message broker (such as RabbitMQ) running on `localhost` (the local machine), using the default username (`guest`) and password (`guest`), and the default AMQP port (`5672`).  
 This allows the publisher to send messages to the broker, and the subscriber to receive those messages from the same broker instance.
+
+- Running RabbitMQ as message broker.
+
+    ![alt text](img/image.png)
+
+- Sending and processing event.
+
+    ![alt text](img/image1.png)
+
+- Monitoring chart based on publisher.
+    ![alt text](img/image2.png)
+    The spike in the message rate chart happened when the publisher sent out messages, causing a temporary rise in the "Publish" rate, visible as purple peaks on the graph. Once all messages were sent, the rate returned to zero, showing that no more messages were being published at that time.
